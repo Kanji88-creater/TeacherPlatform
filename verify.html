@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a stamp · Teacher Platform</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0E5F4D">
+<link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+<main class="page">
+  <header class="top"><div><p class="muted">Teacher Platform</p><h1>Check a stamp</h1></div></header>
+  <p>Every checked document carries a stamp with a code. Type the code here to confirm that the stamp is genuine and the document was not changed.</p>
+  <form class="form card" id="vf"><label>Stamp code<input id="code" placeholder="HOD-AB123-CD456" autocapitalize="characters" required></label><button class="btn btn-solid">Check</button></form>
+  <div id="result"></div>
+  <p class="muted"><a href="index.html">Back</a></p>
+</main>
+<script src="verify.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teacher Platform</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0E5F4D">
+<link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body class="landing">
+<main class="page">
+  <section class="hero">
+    <p class="kicker">For Zambian schools</p>
+    <h1>Plan. Teach. Check. Report.</h1>
+    <p>Lesson plans, marks, registers and records of work, checked by your HOD and Deputy Head, with a school overview for the Head teacher.</p>
+  </section>
+  <section class="card" id="card">
+    <div id="openBox" hidden class="stack"><p id="welcome"></p><a class="btn btn-solid" href="dashboard.html">Open my dashboard</a><button class="btn btn-outline" id="out" type="button">Sign out</button></div>
+    <div id="doneBox" hidden class="stack"><h2>Almost there</h2><p id="doneMsg"></p><a class="btn btn-solid" id="doneLink" href="dashboard.html" hidden>Open my dashboard</a></div>
+    <div id="formBox">
+      <div class="tabs" role="tablist"><button role="tab" type="button" id="tLogin" aria-selected="true">Sign in</button><button role="tab" type="button" id="tSignup" aria-selected="false">Create account</button></div>
+      <form class="form" id="authForm" style="margin-top:12px">
+        <div id="signupOnly" class="form" hidden>
+          <label>I am the<select name="role"><option value="teacher">Teacher</option><option value="hod">Head of Department (HOD)</option><option value="dht">Deputy Head Teacher</option><option value="head">Head Teacher</option></select></label>
+          <label>Full name<input name="name" autocomplete="name"></label>
+          <div id="headFields" class="form" hidden>
+            <label>School name<input name="schoolName"></label>
+            <label>Departments, one per line<textarea name="departments" rows="6">Mathematics
+Sciences
+Languages
+Social Sciences
+Business and Practical Subjects
+Creative and Expressive Arts
+Primary Section</textarea></label>
+          </div>
+          <div id="staffFields" class="form">
+            <label>School code from your Head teacher<input name="schoolCode" autocapitalize="characters" maxlength="10"></label>
+            <p class="muted" id="schoolName"></p>
+            <label id="deptRow">Department<select name="department"></select></label>
+          </div>
+        </div>
+        <label>Email<input type="email" name="email" required autocomplete="email"></label>
+        <label>Password (8 or more characters)<input type="password" name="password" required minlength="8"></label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn btn-solid" id="go">Sign in</button>
+      </form>
+    </div>
+  </section>
+  <p class="muted"><a href="privacy.html">How your information is protected</a> · <a href="verify.html">Check a stamp</a></p>
+</main>
+<script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy · Teacher Platform</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0E5F4D">
+<link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+<main class="page">
+  <header class="top"><div><p class="muted">Teacher Platform</p><h1>Privacy</h1></div></header>
+  <section class="card"><h2>What is stored</h2><p>Your account (name, email, role, department, school), the classes, pupils, marks, attendance and plans you enter, the documents you submit for checking, and optional pupil photos. A record is kept of who signed in, submitted, checked or viewed a document.</p></section>
+  <section class="card"><h2>Who can see what</h2>
+  <div class="tblwrap"><table class="tbl"><thead><tr><th>Role</th><th>Can see</th><th>Cannot see</th></tr></thead><tbody>
+  <tr><td>Teacher</td><td>Only their own classes, pupils, marks, plans and photos, and the check results on their own documents.</td><td>Any other teacher's data.</td></tr>
+  <tr><td>HOD</td><td>Documents that teachers in their own department submit, and numbers for their department.</td><td>Other departments. Anything a teacher has not submitted. Photos.</td></tr>
+  <tr><td>Deputy Head</td><td>Department batches that HODs send, and school-wide numbers.</td><td>Anything not sent in a batch. Photos.</td></tr>
+  <tr><td>Head teacher</td><td>School-wide results, attendance rates, staff list, and how many documents are checked.</td><td>Pupil names, photos and the contents of documents.</td></tr>
+  <tr><td>Developer</td><td>Schemes of work uploaded for all teachers, and the number of schools and users.</td><td>Not available to teachers' data through the app.</td></tr>
+  </tbody></table></div>
+  <p class="muted">The person who hosts the server can technically reach the database, so the server must be kept secure, use HTTPS, and be backed up.</p></section>
+  <section class="card"><h2>Pupil photos</h2><p>Photos are optional. Only add a photo with the permission of the school and the pupil's parent or guardian. Photos are private to the teacher who added them and are never shown to other staff.</p></section>
+  <section class="card"><h2>Protection</h2><p>Passwords are stored as one-way hashes. Sign-in sessions use secure cookies. Every request is checked against your role on the server, not only in the app. Stamps carry a code that anyone can verify, and the check reveals only the document title and who checked it.</p></section>
+  <section class="card"><h2>Your choices</h2><p>In My account you can download all your data, remove it from your device, or delete your account and everything saved on the server.</p></section>
+  <p class="muted">This page describes how the app works. It is not legal advice. Schools should confirm their obligations under Zambia's data protection law.</p>
+  <p class="muted"><a href="index.html">Back</a></p>
+</main>
+</body>
+</html>

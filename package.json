@@ -1,0 +1,8 @@
+{
+  "name": "teacher-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Teacher platform for Zambian schools: lesson plans, marks, registers and records of work with HOD, Deputy Head and Head teacher checking.",
+  "scripts": { "start": "node server.js", "test": "node test-api.js && node test-client.js" },
+  "engines": { "node": ">=22.13" }
+}

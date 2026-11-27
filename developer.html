@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Developer</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="page" id="dev">
+  <header class="top"><div><p class="muted">Developer area</p><h1>Schemes of work</h1></div></header>
+
+  <section class="card" id="loginBox">
+    <form class="form" id="loginForm">
+      <label>Developer name<input name="user" autocomplete="username" required></label>
+      <label>Password<input type="password" name="pass" autocomplete="current-password" required></label>
+      <p class="muted" id="loginErr" role="alert"></p>
+      <button class="btn btn-solid">Sign in</button>
+    </form>
+  </section>
+
+  <div id="tools" hidden>
+    <p class="muted" id="stats"></p>
+
+    <section class="card"><h2>Add a scheme of work</h2>
+      <form class="form" id="schemeForm">
+        <label>Title<input name="title" required placeholder="e.g. Physics Grade 11 Term 1"></label>
+        <label>Grade<input name="grade" required></label>
+        <label>Subject<input name="subject" required></label>
+        <label>Term<input name="term" placeholder="Term 1" required></label>
+        <label>Weeks, one per line: week | topic | outcomes | methods | aids | assessment<textarea name="rows" rows="7" required></textarea></label>
+        <button class="btn btn-solid">Publish to all teachers</button>
+      </form>
+    </section>
+
+    <section class="card"><h2>Import from CSV</h2>
+      <p class="muted">Columns: grade, subject, term, week, topic, outcomes, methods, aids, assessment, references. One file can hold many schemes.</p>
+      <label class="form">CSV file<input type="file" id="csvFile" accept=".csv,text/csv"></label>
+    </section>
+
+    <section class="card"><h2>Upload a scheme document (PDF or Word)</h2>
+      <form class="form" id="fileForm">
+        <label>Title<input name="title" required></label>
+        <label>Grade<input name="grade"></label>
+        <label>Subject<input name="subject"></label>
+        <label>Term<input name="term"></label>
+        <label>File (up to 15 MB)<input type="file" name="file" required></label>
+        <button class="btn btn-solid">Upload</button>
+      </form>
+    </section>
+
+    <section><h2>Published schemes</h2><div id="list" class="stack"></div></section>
+    <section><h2>Published documents</h2><div id="files" class="stack"></div></section>
+  </div>
+  <p class="muted" id="msg" role="status"></p>
+</main>
+<script src="dev.js"></script>
+</body>
+</html>
